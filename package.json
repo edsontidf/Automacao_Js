@@ -1,0 +1,31 @@
+{
+  "name": "playwright-tests",
+  "version": "1.0.0",
+  "description": "Projeto de automação de testes usando Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "report": "npx playwright show-report",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js",
+    "prepare": "husky install",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.41.0",
+    "prettier": "^3.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-playwright": "^0.15.3",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.0.0"
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}
