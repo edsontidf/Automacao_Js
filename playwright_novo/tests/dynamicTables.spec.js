@@ -10,7 +10,7 @@ test.describe('Dynamic Tables Tests', () => {
     await tablePage.userName(1).click();
 
     await expect(tablePage.userName(1)).toContainText('João Silva');
-    await page.screenshot({ path: 'table-filter-name.png' });
+    await page.screenshot({ path: 'screenshots/table-filter-name.png' });
   });
 
   test('should edit user age successfully', async ({ page }) => {
@@ -20,7 +20,7 @@ test.describe('Dynamic Tables Tests', () => {
     await tablePage.editUserAge(1, '29');
 
     await expect(tablePage.toast1).toContainText('Usuário atualizadoOs dados foram salvos com sucesso.');
-    await page.screenshot({ path: 'table-edit-age.png' });
+    await page.screenshot({ path: 'screenshots/table-edit-age.png' });
   });
 
   test('should delete user successfully', async ({ page }) => {
@@ -30,6 +30,6 @@ test.describe('Dynamic Tables Tests', () => {
     await tablePage.deleteUser(1);
 
     await expect(tablePage.toast1).toContainText('Usuário removidoO usuário foi removido com sucesso.');
-    await page.screenshot({ path: 'table-delete-user.png' });
+    await page.screenshot({ path: 'screenshots/table-delete-user.png' });
   });
 });

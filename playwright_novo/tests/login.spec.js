@@ -15,7 +15,7 @@ test.describe('Login Tests', () => {
 
     await expect(page.getByTestId('toast-1')).toContainText('Login realizadoBem-vindo, Admin User!');
 
-    await page.screenshot({ path: 'login-valid.png' });
+    await page.screenshot({ path: 'screenshots/login-valid.png' });
   });
 
   test('should show error with invalid credentials', async ({ page }) => {
@@ -30,7 +30,7 @@ test.describe('Login Tests', () => {
 
     await expect(page.getByTestId('toast-title-1')).toContainText('Credenciais inválidas');
 
-    await page.screenshot({ path: 'login-invalid.png' });
+    await page.screenshot({ path: 'screenshots/login-invalid.png' });
   });
 
 });
