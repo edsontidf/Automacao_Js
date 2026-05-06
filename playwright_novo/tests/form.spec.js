@@ -29,7 +29,7 @@ test.describe('Form Tests', () => {
 
     await expect(formPage.toast).toBeVisible();
     await expect(formPage.toast).toContainText('Formulário enviado com sucesso!Tentativa 1 realizada com sucesso.');
-    await page.screenshot({ path: 'form-success.png' });
+    await page.screenshot({ path: 'screenshots/form-success.png' });
   });
 
   test('should show error when submitting empty form', async ({ page }) => {
@@ -40,7 +40,7 @@ test.describe('Form Tests', () => {
     await formPage.submitForm();
 
     await expect(formPage.toast).toContainText('Erro na validaçãoCorrija os erros antes de enviar.');
-    await page.screenshot({ path: 'form-error.png' });
+    await page.screenshot({ path: 'screenshots/form-error.png' });
   });
 
 });
